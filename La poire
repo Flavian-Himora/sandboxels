@@ -1,0 +1,24 @@
+// Vérifie si l'élément "hamburger" n'existe pas déjà
+if (!elements.hamburger) {
+    elements.hamburger = {
+        color: "#D2691E", // Couleur du hamburger (brun)
+        behavior: behaviors.SOLID, // Comportement solide
+        category: "food", // Catégorie : nourriture
+        tempHigh: 200, // Le hamburger brûle à haute température
+        stateHigh: "ash", // Se transforme en cendres s'il brûle
+        density: 500, // Densité
+        hardness: 0.5, // Dureté (facile à casser)
+        description: "Un délicieux hamburger créé par un mélange improbable.", // Description dans le jeu
+    };
+}
+
+// Ajoute une réaction entre rouille et colorsand
+if (!elements.rust.reactions) {
+    elements.rust.reactions = {};
+}
+
+elements.rust.reactions.colorsand = {
+    elem1: "hamburger", // Résultat après la réaction
+    elem2: null,        // Le colorsand est consommé
+    chance: 1,          // 100% de chance que la réaction se produise
+};
